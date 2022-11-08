@@ -6,6 +6,7 @@ const initialState = {
     title: "",
     message: "",
   },
+  loading: true,
 };
 
 const uiSlice = createSlice({
@@ -16,7 +17,17 @@ const uiSlice = createSlice({
       state.notification = action.payload;
     },
     turnOffNotification(state, action) {
-      state.notification = action.payload;
+      state.notification = {
+        status: "",
+        title: "",
+        message: "",
+      };
+    },
+    turnOnLoading(state) {
+      state.loading = true;
+    },
+    turnOffLoading(state) {
+      state.loading = false;
     },
   },
 });

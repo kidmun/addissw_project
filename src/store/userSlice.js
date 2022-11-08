@@ -7,6 +7,10 @@ const userSlice = createSlice({
   name: "users",
   initialState,
   reducers: {
+    getUsers() {},
+    addUserRequest() {},
+    deleteUserRequest() {},
+    updateUserRequest() {},
     replaceUsers(state, action) {
       state.users = action.payload;
     },
@@ -18,7 +22,7 @@ const userSlice = createSlice({
       const userIndex = state.users.findIndex(
         (user) => user.id === updatedUser.id
       );
-      if (userIndex > 0) {
+      if (userIndex < 0) {
         throw new Error("user not found");
       } else {
         state.users[userIndex] = updatedUser;
@@ -26,12 +30,9 @@ const userSlice = createSlice({
     },
     deleteUser(state, action) {
       const userId = action.payload.id;
-      const user = state.users.find((user) => user.id === userId);
-      if (!user) {
-        throw new Error("user not found");
-      } else {
-        state.users.filter((user) => user.id !== userId);
-      }
+      console.log(userId);
+
+      state.users = state.users.filter((user) => user.id !== userId);
     },
   },
 });

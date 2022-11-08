@@ -56,8 +56,9 @@
   }
   
   .button.button--accent {
-    border-color: #fab83f;
-    color: #fab83f;
+    border-color: white;
+    color: #24a392;
+    background-color: white;
   }
   
   .button--accent:hover,
@@ -83,8 +84,9 @@
   }
   
   .button.button--danger {
-    border-color: #a30000;
-    color: #a30000;
+    border-color: hsl(0, 100%, 32%);
+    color: white;
+    background-color: #010d44;
   }
   
   .button--danger:hover,
@@ -96,7 +98,7 @@
   .button--flat.button--danger:hover,
   .button--flat.button--danger:active {
     background: rgba(163, 0, 0, 0.3);
-    color: #a30000;
+    color: white;
   }
   
   .button.button--danger.button--raised {

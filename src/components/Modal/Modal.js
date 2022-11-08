@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
-import Button from '../Button/Button';
-import './Modal.css';
+import Button from "../Button/Button";
+import "./Modal.css";
 
 const Modal = (props) =>
   ReactDOM.createPortal(
@@ -25,7 +25,7 @@ const Modal = (props) =>
         </Button>
       </div>
     </div>,
-    document.getElementById('modal-root')
+    document.getElementById("modal-root")
   );
 
 export default Modal;

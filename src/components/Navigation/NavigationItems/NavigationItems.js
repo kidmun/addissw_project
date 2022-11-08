@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Button from "../../Button/Button";
 import "./NavigationItems.css";
 
 const navItems = [
@@ -17,7 +18,7 @@ const NavigationItems = (props) => {
           )}
         >
           <NavLink to={item.link} onClick={props.onChoose}>
-            {item.text}
+            <Button mode="danger">{item.text}</Button>
           </NavLink>
         </li>
       ))}

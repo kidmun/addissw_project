@@ -1,0 +1,1 @@
+export const API_URL = "https://addis-e2df3-default-rtdb.firebaseio.com/users.json";

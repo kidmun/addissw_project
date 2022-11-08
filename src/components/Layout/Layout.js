@@ -1,13 +1,15 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
 
-import './Layout.css';
+import "./Layout.css";
 
 const Layout = (props) => {
-  return <Fragment>
-    <header className="main-header">{props.header}</header>
-    {props.mobileNav}
-    <main className="content">{props.children}</main>
-  </Fragment>
+  return (
+    <Fragment>
+      <header className="main-header">{props.header}</header>
+      {props.mobileNav}
+      <main className="content">{props.children}</main>
+    </Fragment>
+  );
 };
 
 export default Layout;
